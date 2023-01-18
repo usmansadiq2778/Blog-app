@@ -1,0 +1,45 @@
+.button {
+    position: relative;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: none;
+    margin: 15px !important;
+    transform: none;
+    cursor: pointer;
+    width: 80%;
+    color: black;
+    height: 40px;
+  }
+  
+  .button:after {
+    content: "";
+    height: 100%;
+    width: calc(100% + 5px);
+    position: absolute;
+    /* top: -2px;
+    left: -10px; */
+    border-top: 2px solid rgb(20, 20, 20);
+    border-bottom: 2px solid  rgb(20, 20, 20);
+    transition: 1s;
+  }
+  
+  .button:before {
+    content: "";
+    height: calc(100% + 5px);
+    width: 100%;
+    position: absolute;
+    /* top: -10px;
+    left: -2px; */
+    border-left: 2px solid rgb(20, 20, 20);
+    border-right: 2px solid rgb(20, 20, 20);
+    transition: 1s;
+    
+  }
+  
+  .button:hover:before {
+    transform: rotateY(180deg);
+  }
+  
+  .button:hover:after {
+    transform: rotateX(180deg);
+  }
